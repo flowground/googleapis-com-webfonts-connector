@@ -1,0 +1,51 @@
+{
+    "title": "Google Fonts Developer",
+    "description": "Accesses the metadata for all families served by Google Fonts, providing a list of families currently available (including available styles and a list of supported script subsets).",
+    "docsUrl": "https://developers.google.com/fonts/docs/developer_api",
+    "url": "https://api.apis.guru/v2/specs/googleapis.com/webfonts/v1/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "https://www.googleapis.com/webfonts/v1",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "webfonts_webfonts_list": {
+            "main": "./lib/actions/webfonts_webfonts_list.js",
+            "title": "Retrieves the list of fonts currently served by the Google Fonts Developer API",
+            "description": "Retrieves the list of fonts currently served by the Google Fonts Developer API",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/webfonts_webfonts_list.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}
