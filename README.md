@@ -5,7 +5,7 @@
 A generated **flow**ground connector for the Google Fonts Developer API (version v1).
 
 Generated from: https://api.apis.guru/v2/specs/googleapis.com/webfonts/v1/swagger.json<br/>
-Generated at: 2019-05-07T17:42:07+03:00
+Generated at: 2019-05-23T12:13:48+03:00
 
 ## API Description
 
